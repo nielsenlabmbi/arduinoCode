@@ -1,0 +1,82 @@
+
+
+
+
+Commands:
+
+
+Set
+
+    Set wavename and parameters.
+
+Where wavenames are one of : “sin”  “tri”  “sqr”  “saw”  “ramp"
+
+For wavename sin, the params are interpreted as: 
+    param1 -> freq  (Hz)
+    param2 -> phase  (rad) 
+    param3 -> dutyCycle     (ignored)
+
+E.G.  the full command string sent :    !Set(sin 0.4 10 0 0)
+
+
+For wavename tri, the params are interpreted as: 
+    param1 -> freq  (Hz)
+    param2 -> phase           (ignored) 
+    param3 -> dutyCycle     (ignored)
+
+E.G.  the full command string sent :    !Set(tri 0.4 10 0 0)
+
+
+For wavename sqr, the params are interpreted as: 
+    param1 -> freq  (Hz)
+    param2 -> phase          (ignored) 
+    param3 -> dutyCycle    (% e.g. 50)
+
+E.G.  the full command string sent :    !Set(sqr 0.4 10 0 50)
+
+
+For wavename saw, the params are interpreted as: 
+    param1 -> freq  (Hz)
+    param2 -> rampDur1  (sec) 
+    param3 -> rampDur2  (sec)
+
+E.G.  the full command string sent :    !Set(saw 0.4 10 0.4 0.2)
+
+
+For wavename ramp, the params are interpreted as: 
+    param1 ->rampDur1  (sec) 
+    param2 ->holdDur  (sec) 
+    param3 -> rampDur2  (sec)
+
+E.G.  the full command string sent :    !Set(ramp 0.4 0.1 0.4 0.1)
+
+
+
+
+Get
+
+   Returns a string containing the current wavename and params.
+
+E.G.  the full command string sent :    !Get
+
+
+
+
+Start/Stop
+
+    Starts/Stops the analog output and sync.
+
+E.G.  the full command string sent :    !Start
+
+
+
+
+LED
+
+  Toggles the “Output Active” LED on the controller box.
+
+E.G.  the full command string sent :    !LED
+
+
+
+
